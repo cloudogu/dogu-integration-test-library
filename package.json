@@ -1,0 +1,38 @@
+{
+  "name": "@cloudogu/dogu-integration-test-library",
+  "version": "0.1.0-development",
+  "description": "Library containing functionality used by all dogus integration tests in the Cloudogu Ecosystem",
+  "homepage": "https://github.com/cloudogu/dogu-integration-test-library#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cloudogu/dogu-integration-test-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cloudogu/dogu-integration-test-library/issues"
+  },
+  "dependencies": {
+    "cypress": "7.1.0",
+    "cypress-cucumber-preprocessor": "4.1.0"
+  },
+  "author": "Cloudogu <hello@cloudogu.com>",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "cypress",
+    "command",
+    "type",
+    "e2e",
+    "test",
+    "dogu",
+    "ces"
+  ]
+}

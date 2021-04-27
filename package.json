@@ -10,10 +10,6 @@
   "bugs": {
     "url": "https://github.com/cloudogu/dogu-integration-test-library/issues"
   },
-  "dependencies": {
-    "cypress": "7.1.0",
-    "cypress-cucumber-preprocessor": "4.1.0"
-  },
   "author": "Cloudogu <hello@cloudogu.com>",
   "main": "lib/index.js",
   "license": "MIT",

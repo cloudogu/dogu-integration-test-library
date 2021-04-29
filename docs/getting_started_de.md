@@ -54,7 +54,7 @@ module.exports = (on, config) => {
 
 **3) Registrieren der Library-Befehle**
 
-Alle Befehle der Library müssen im Projekt registriert werden. Dafür muss die Datei `cypress/suppoert/index.js` folgendermaßen erweitert werden:
+Alle Befehle der Library müssen im Projekt registriert werden. Dafür muss die Datei `cypress/support/index.js` folgendermaßen erweitert werden:
 ```javascript
 // Loads all commands from the dogu integration library into this project
 const doguTestLibrary = require('@cloudogu/dogu-integration-test-library')
@@ -66,7 +66,7 @@ import './commands/my_project_commands'
 
 **4) Registrieren der Library-Schritt-Definitionen**
 
-Alle Schitt-Definitionen der Library müssen im Projekt registriert werden. Dafür sollte eine Datei `dogu_integration_test_library_steps.js` im Ordner `cypress/support/step-definitions` angelegt werden. Die Datei muss folgendes enthalten:
+Alle Schritt-Definitionen der Library müssen im Projekt registriert werden. Dafür sollte eine Datei `dogu_integration_test_library_steps.js` im Ordner `cypress/support/step_definitions` angelegt werden. Die Datei muss folgendes enthalten:
 ```javascript
 // Loads all steps from the dogu integration library into this project
 const doguTestLibrary = require('@cloudogu/dogu-integration-test-library')

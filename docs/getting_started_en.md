@@ -38,7 +38,7 @@ Add the library as a dependency in package.json:
       "@cloudogu/dogu-integration-test-library": "0.1.1-development"
    },
    "scripts": {
-      "updateTests": "cp -r node_modules/@cloudogu/dogu-integration-test-library/lib/integration cypress/integration/dogu_integration_test_lib/"
+      "updateTests": "cp -r node_modules/@cloudogu/dogu-integration-test-library/lib/integration/* cypress/integration/dogu_integration_test_lib"
    }
 }
 ```

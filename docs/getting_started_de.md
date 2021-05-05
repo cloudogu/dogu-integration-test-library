@@ -164,3 +164,18 @@ Es müssen die folgenden Steps für jedes Dogu implementiert werden:
     //Bestimme, dass der derzeitige User kein Adminrechte im Dogu
 });
 ```
+
+**7) Test-User Fixture anlegen**
+
+Es muss im Ordner `cypress/fixtures` eine Fixture mit dem Namen `testuser_data.json` angelegt werden. Diese enthält folgende Informationen:
+
+```json
+{
+  "username": "testuser",
+  "password": "testuserpassword",
+  "givenname": "test",
+  "surname": "test",
+  "displayName": "test",
+  "mail": "test@cloudogu.com"
+}
+```

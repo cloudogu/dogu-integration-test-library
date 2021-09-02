@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Fixed
-* broken tests for cas 6, [#4]
+* broken tests for cas 6 [#4]
 
 ## v0.2.1
 

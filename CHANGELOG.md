@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+* support to provide default groups when creating users
+### Changed
+* skipping CAS authentication is a valid cas session is present
+
 ## v0.2.2
 ### Fixed
 * broken tests for cas 6 [#4]

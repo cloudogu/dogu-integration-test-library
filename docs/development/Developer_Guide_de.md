@@ -11,7 +11,7 @@ Installieren sie die folgenden Werkzeuge:
 
 # Entwicklungsumgebung vorbereiten
 
-1) Abhänigkeiten herunterladen mit `yarn install`
+1) Abhängigkeiten herunterladen mit `yarn install`
 
 # Library veröffentlichen
 

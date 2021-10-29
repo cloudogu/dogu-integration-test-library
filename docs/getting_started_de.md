@@ -36,7 +36,7 @@ Die Library als Abhänigkeit in der package.json hinzufügen:
   "dependencies": {
     "cypress": "7.1.0",
     "cypress-cucumber-preprocessor": "4.1.0",
-    "@cloudogu/dogu-integration-test-library": "0.1.1-development"
+    "@cloudogu/dogu-integration-test-library": "0.4.0"
   },
    "scripts": {
       "updateTests": "mkdir -p cypress/integration/dogu_integration_test_lib && cp -r node_modules/@cloudogu/dogu-integration-test-library/lib/integration/* cypress/integration/dogu_integration_test_lib"

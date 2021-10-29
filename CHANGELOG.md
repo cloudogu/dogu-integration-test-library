@@ -5,13 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+* improve test times by replacing `cy.type` with `cy.fill` from the library `cypress-fill-command` #9
 
 ## v0.4.0
 ### Fixed
 * support for the new cas version 6.3.3-7
 
 ## v0.3.0
-
 ### Added
 * support to provide default groups when creating users
 

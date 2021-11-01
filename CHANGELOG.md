@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+**Breaking Change:** Every `cy.type(...)` command was replaced by `cy.fill(...)`. This requires a manual import in every client: Add `import 'cypress-fill-command'` to the `index.js` file of your integration tests
+
 ## v0.5.0
 ### Changed
 * improve test times by replacing `cy.type` with `cy.fill` from the library `cypress-fill-command` #9

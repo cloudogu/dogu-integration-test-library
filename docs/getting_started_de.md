@@ -27,9 +27,9 @@ integrationTests
 
 ## Einbinden der Library
 
-**1) Abhänigkeit hinzufügen**
+**1) Abhängigkeit hinzufügen**
 
-Die Library als Abhänigkeit in der package.json hinzufügen:
+Die Library als Abhängigkeit in der package.json hinzufügen:
 
 ```json
 {
@@ -50,6 +50,7 @@ Die Library muss bei Ausführung von Cypress konfiguriert werden. Dafür muss di
 folgendermaßen erweitert werden:
 
 ```javascript
+import 'cypress-fill-command'
 const doguTestLibrary = require('@cloudogu/dogu-integration-test-library')
 
 /**

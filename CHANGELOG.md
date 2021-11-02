@@ -6,8 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## v1.0.0
 ### Changed
-**Breaking Change:** Remove `cy.fill` with a global option that removes the keystroke delay. The new keystroke delay is set to `0` when using this library.
+**Breaking Change:** Remove `cy.fill` with a global option that removes the keystroke delay. The new keystroke delay is set to `0` when using this library. The value can be overridden by executing the following command: 
+```javascript
+Cypress.Keyboard.defaults({
+    keystrokeDelay: 500,
+})
+```
 
 ## v0.5.0
 ### Changed

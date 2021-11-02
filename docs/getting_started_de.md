@@ -27,9 +27,9 @@ integrationTests
 
 ## Einbinden der Library
 
-**1) Abhänigkeit hinzufügen**
+**1) Abhängigkeit hinzufügen**
 
-Die Library als Abhänigkeit in der package.json hinzufügen:
+Die Library als Abhängigkeit in der package.json hinzufügen:
 
 ```json
 {

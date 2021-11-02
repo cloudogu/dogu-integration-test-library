@@ -49,7 +49,6 @@ The library must be configured when running Cypress. For this, the file `cypress
 follows:
 
 ```javascript
-import 'cypress-fill-command'
 const doguTestLibrary = require('@cloudogu/dogu-integration-test-library')
 
 /**

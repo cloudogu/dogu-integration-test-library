@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-**Breaking Change:** Every `cy.type(...)` command was replaced by `cy.fill(...)`. This requires a manual import in every client: Add `import 'cypress-fill-command'` to the `index.js` file of your integration tests
+**Breaking Change:** Remove `cy.fill` with a global option that removes the keystroke delay. The new keystroke delay is set to `0` when using this library.
 
 ## v0.5.0
 ### Changed

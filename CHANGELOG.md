@@ -4,7 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## v2.0.0 - 2021-11-08
+This release includes breaking changes!
+### Changed
+- Adapt three When functions to make them behave according to their description; #12
+  - "the user types in correct login credentials" will type correct test user credentials into the CAS login text boxes
+  - "the user types in wrong login credentials" will type wrong credentials into the CAS login text boxes
+  - "the user clicks the login button" will press the login button on the CAS login page
+
+### Added
+- Create new functions to rebuild original behavior of the changed functions
+  - "the test user logs in with correct credentials" replaces "the user types in correct login credentials" and "the user clicks the login button"
+  - "the user logs in with wrong credentials" replaces "the user types in wrong login credentials" and "the user clicks the login button"
+- Add Given function to turn off warp menu hint
 
 ## v1.0.0
 ### Changed

@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+#### Breaking Change
+CAS Version 6.3.3-9 is now required
+- use cas testkeys to select html elements; #14
+
 ## v2.0.0 - 2021-11-08
 This release includes breaking changes!
 ### Changed

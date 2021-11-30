@@ -4,6 +4,12 @@
 
 This repository contains a library to support the creation of dogu integration test in the ecosystem.
 
+## Version dogu compatibility
+
+|Lib-Version | Dogu |
+|---|---|
+|  2.0.0+ | CAS:6.3.3-9 |
+
 ### Where do I find more information about the dogu-integrationtest-runner library?
 
 - [Deutsch] [Getting Started](docs/getting_started_de.md)

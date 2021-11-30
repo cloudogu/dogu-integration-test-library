@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## v3.0.0 - 2021-11-30
 ### Changed
 #### Breaking Change
 CAS Version 6.3.3-9 is now required

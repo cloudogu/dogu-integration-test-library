@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Fixed
-- Fixed wrong data-testid for cas password field (#16)
+- Remove unused functions (#16)
 
 ## v3.0.0 - 2021-11-30
 ### Changed

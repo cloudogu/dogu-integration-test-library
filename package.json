@@ -1,6 +1,6 @@
 {
   "name": "@cloudogu/dogu-integration-test-library",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Library containing functionality used by all dogus integration tests in the Cloudogu Ecosystem",
   "homepage": "https://github.com/cloudogu/dogu-integration-test-library#readme",
   "repository": {

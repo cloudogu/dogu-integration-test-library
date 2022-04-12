@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fix the selection of the checkbox that is used to hide the warp-menu tipps (#18)
 
 ## v3.0.1 - 2022-04-01
 ### Fixed
@@ -14,12 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 #### Breaking Change
 CAS Version 6.3.3-9 is now required
-- use cas testkeys to select html elements; #14
+- use cas testkeys to select html elements (#14)
 
 ## v2.0.0 - 2021-11-08
 This release includes breaking changes!
 ### Changed
-- Adapt three When functions to make them behave according to their description; #12
+- Adapt three When functions to make them behave according to their description  (#12)
   - "the user types in correct login credentials" will type correct test user credentials into the CAS login text boxes
   - "the user types in wrong login credentials" will type wrong credentials into the CAS login text boxes
   - "the user clicks the login button" will press the login button on the CAS login page
@@ -41,7 +43,7 @@ Cypress.Keyboard.defaults({
 
 ## v0.5.0
 ### Changed
-* improve test times by replacing `cy.type` with `cy.fill` from the library `cypress-fill-command` #9
+* improve test times by replacing `cy.type` with `cy.fill` from the library `cypress-fill-command` (#9)
 
 ## v0.4.0
 ### Fixed

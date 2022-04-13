@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## v3.0.3 - 2022-04-13
+### Changed
+- Changed the way the library checks if a wrong password is submitted. Now the Element itself is checked prior to a check for a specific string.
+
 ## v3.0.2 - 2022-04-12
 ### Fixed
 - Fix the selection of the checkbox that is used to hide the warp-menu tipps (#18)

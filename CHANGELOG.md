@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+#### Breaking Change
+The signature of the `usermgtCreateUser` method has changed. The parameter `pwdReset` has been added.
+- When creating a new user, it is now possible to specify that the user must change their password the next time they 
+  log in (#22)
 
 ## v3.0.3 - 2022-04-13
 ### Changed

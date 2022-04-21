@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## v5.0.0 - 2022-04-21
+### Changed
+#### Breaking Change
+CAS Version 6.5.2-1 is now required
+- Make login compatible with CAS version 6.5.2.
+
+## v4.0.0 - 2022-04-13
+### Changed
+#### Breaking Change
+The signature of the `usermgtCreateUser` method has changed. The parameter `pwdReset` has been added.
+- When creating a new user, it is now possible to specify that the user must change their password the next time they 
+  log in (#22)
+
 ## v3.0.3 - 2022-04-13
 ### Changed
 - Changed the way the library checks if a wrong password is submitted. Now the Element itself is checked prior to a check for a specific string.

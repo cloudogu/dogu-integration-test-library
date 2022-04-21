@@ -6,9 +6,10 @@ This repository contains a library to support the creation of dogu integration t
 
 ## Version dogu compatibility
 
-|Lib-Version | Dogu |
-|---|---|
-|  2.0.0+ | CAS:6.3.3-9 |
+| Lib-Version | Dogu        |
+|-------------|-------------|
+| 2.0.0-4.0.0 | CAS:6.3.3-9 |
+| 5.0.0+      | CAS:6.5.2-1 |
 
 ### Where do I find more information about the dogu-integrationtest-runner library?
 

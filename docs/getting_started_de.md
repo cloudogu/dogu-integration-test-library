@@ -32,7 +32,7 @@ Die Library als Abhängigkeit in der package.json hinzufügen:
 ```json
 {
   "dependencies": {
-    "cypress": "7.1.0",
+    "cypress": "12.9.0",
     "cypress-cucumber-preprocessor": "4.1.0",
     "@cloudogu/dogu-integration-test-library": "6.0.0"
   },

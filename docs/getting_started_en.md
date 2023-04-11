@@ -32,8 +32,9 @@ Add the library as a dependency in package.json:
 ```json
 {
    "dependencies": {
-      "cypress": "7.1.0",
-      "cypress-cucumber-preprocessor": "4.1.0",
+      "cypress": "12.9.0",
+      "@badeball/cypress-cucumber-preprocessor": "^16.0.0",
+      "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
       "@cloudogu/dogu-integration-test-library": "6.0.0"
    },
    "scripts": {

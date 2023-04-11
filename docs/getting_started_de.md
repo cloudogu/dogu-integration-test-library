@@ -31,11 +31,12 @@ Die Library als Abhängigkeit in der package.json hinzufügen:
 
 ```json
 {
-  "dependencies": {
-    "cypress": "12.9.0",
-    "cypress-cucumber-preprocessor": "4.1.0",
-    "@cloudogu/dogu-integration-test-library": "6.0.0"
-  },
+   "dependencies": {
+      "cypress": "12.9.0",
+      "@badeball/cypress-cucumber-preprocessor": "^16.0.0",
+      "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+      "@cloudogu/dogu-integration-test-library": "6.0.0"
+   },
    "scripts": {
       "updateTests": "mkdir -p cypress/e2e/dogu_integration_test_lib && cp -r node_modules/@cloudogu/dogu-integration-test-library/lib/integration/* cypress/e2e/dogu_integration_test_lib"
    }

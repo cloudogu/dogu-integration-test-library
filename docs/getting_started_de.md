@@ -10,10 +10,8 @@ integrationTests
 ├── cypress
 │ ├── fixtures
 │ │ └── *
-│ ├── integration
+│ ├── e2e
 │ │ └── *.feature
-│ ├── plugins
-│ │ └── index.js
 │ └── support
 │ ├── step_definitions
 │ │ └── *.js
@@ -33,37 +31,43 @@ Die Library als Abhängigkeit in der package.json hinzufügen:
 
 ```json
 {
-  "dependencies": {
-    "cypress": "7.1.0",
-    "cypress-cucumber-preprocessor": "4.1.0",
-    "@cloudogu/dogu-integration-test-library": "0.4.0"
-  },
+   "dependencies": {
+      "cypress": "12.9.0",
+      "@badeball/cypress-cucumber-preprocessor": "^16.0.0",
+      "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+      "@cloudogu/dogu-integration-test-library": "6.0.0"
+   },
    "scripts": {
-      "updateTests": "mkdir -p cypress/integration/dogu_integration_test_lib && cp -r node_modules/@cloudogu/dogu-integration-test-library/lib/integration/* cypress/integration/dogu_integration_test_lib"
+      "updateTests": "mkdir -p cypress/e2e/dogu_integration_test_lib && cp -r node_modules/@cloudogu/dogu-integration-test-library/lib/integration/* cypress/e2e/dogu_integration_test_lib"
    }
 }
 ```
 
 **2) Library in Cypress Projekt einbinden**
 
-Die Library muss bei Ausführung von Cypress konfiguriert werden. Dafür muss die Datei `cypress/plugins/index.js`
+Die Library muss bei Ausführung von Cypress konfiguriert werden. Dafür muss die Datei `cypress.config.js`
 folgendermaßen erweitert werden:
 
 ```javascript
 const doguTestLibrary = require('@cloudogu/dogu-integration-test-library')
+const { defineConfig } = require('cypress')
 
-/**
- * @type {Cypress.PluginConfig}
- */
-module.exports = (on, config) => {
-    config = doguTestLibrary.configure(config)
-    return config
-}
+module.exports = defineConfig({
+   // setupNodeEvents can be defined in either
+   // the e2e or component configuration
+   e2e: {
+      setupNodeEvents(on, config) {
+         config = doguTestLibrary.configure(config)
+         
+         return config
+      },
+   },
+})
 ```
 
 **3) Registrieren der Library-Befehle**
 
-Alle Befehle der Library müssen im Projekt registriert werden. Dafür muss die Datei `cypress/support/index.js`
+Alle Befehle der Library müssen im Projekt registriert werden. Dafür muss die Datei `cypress/support/e2e.js`
 folgendermaßen erweitert werden:
 
 ```javascript
@@ -90,11 +94,11 @@ doguTestLibrary.registerSteps()
 **5) Anpassen der Cypress konfiguration**
 
 Damit die Library nun auch sinnvoll mit dem Cypress Projekt arbeiten kann müssen folgenden Einstellung in
-der `cypress.json` erstellt werden:
+der `cypress.config.js` erstellt werden:
 
 1) Es muss die base-URL auf das Hostsystem angepasst werden. Dafür muss das Feld `baseUrl` auf die Host-FQDN angepasst
    werden (z.B. `https://local.cloudogu.com`)
-2) Weitere Konfigurationen müssen als Umgebungsvariablen in der `cypress.json` gesetzt werden:
+2) Weitere Konfigurationen müssen als Umgebungsvariablen in der `cypress.config.js` gesetzt werden:
 
 - `DoguName` - Bestimmt den Namen des jetzigen Dogus und wir beim Routing benutzt.
 - `MaxLoginRetries` - Bestimmt die Anzahl der Loginversuche, bevor ein Test fehlschlägt.
@@ -102,19 +106,31 @@ der `cypress.json` erstellt werden:
 - `AdminPassword` - Das Passwort des CES-Admins.
 - `AdminGroup` - Die Benutzergruppe für CES-Administratoren.
 
-Eine Beispiel-`cypress.json` sieht folgendermaßen aus:
+Eine Beispiel-`cypress.config.js` sieht folgendermaßen aus:
 
-```json
-{
-  "baseUrl": "https://192.168.56.2",
-  "env": {
-    "DoguName": "redmine",
-    "MaxLoginRetries": 3,
-    "AdminUsername": "ces-admin",
-    "AdminPassword": "ecosystem2016",
-    "AdminGroup": "CesAdministrators"
-  }
-}
+```javascript
+const doguTestLibrary = require('@cloudogu/dogu-integration-test-library')
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
+   e2e: {
+      baseUrl: 'https://192.168.56.2',
+      env: {
+         "DoguName": "redmine",
+         "MaxLoginRetries": 3,
+         "AdminUsername": "ces-admin",
+         "AdminPassword": "ecosystem2016",
+         "AdminGroup": "CesAdministrators"
+      },
+      videoCompression: false,
+      specPattern: ["cypress/e2e/**/*.feature"],
+      setupNodeEvents(on, config) {
+         config = doguTestLibrary.configure(config)
+         
+         return config
+      },
+   },
+})
 ```
 
 **6) Integrieren der globalen Tests in das Dogus**

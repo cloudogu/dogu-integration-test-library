@@ -1,12 +1,13 @@
 {
   "name": "@cloudogu/dogu-integration-test-library",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Library containing functionality used by all dogus integration tests in the Cloudogu Ecosystem",
   "homepage": "https://github.com/cloudogu/dogu-integration-test-library#readme",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/cloudogu/dogu-integration-test-library.git"
   },
+  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/cloudogu/dogu-integration-test-library/issues"
   },
@@ -30,5 +31,9 @@
     "test",
     "dogu",
     "ces"
-  ]
+  ],
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^16.0.0",
+    "cypress": "^12.9.0"
+  }
 }

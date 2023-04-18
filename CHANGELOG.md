@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## v6.0.0 - 2023-04-18
+### Changed
+#### Breaking Change
+Cypress Version 12.9.0 or higher is now required
+- Make the library compatible with cypress 12
+
 ## v5.0.0 - 2022-04-21
 ### Changed
 #### Breaking Change

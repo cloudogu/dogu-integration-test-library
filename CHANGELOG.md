@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Fixed
-- Fix handling of environment variables from the cypress config
+- Handling of environment variables from the cypress config
 
 ## v6.0.0 - 2023-04-18
 ### Changed

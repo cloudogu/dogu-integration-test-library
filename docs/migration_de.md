@@ -19,6 +19,15 @@ Die `package.json` enthält jetzt das neue Cypress-Cucumber-Plugin und hat jetzt
 }
 ```
 
+Ferner muss in der `package.json` der updateTests Script-Befehl angepasst werden:
+```json
+{
+  "scripts": {
+    "updateTests": "mkdir -p cypress/e2e/dogu_integration_test_lib && cp -r node_modules/@cloudogu/dogu-integration-test-library/lib/e2e/* cypress/e2e/dogu_integration_test_lib"
+  }
+}
+```
+
 #### Konfiguration
 Die Konfiguration von Cypress ist in der Datei `cypress.config.js` zu finden.
 Die alte Konfigurations-Datei `cypress.json` kann nach der Migration gelöscht werden.
@@ -72,6 +81,7 @@ module.exports = defineConfig({
  * Die alte Konfigurations-Datei `cypress.json` muss gelöscht werden.
  * Die alte Plugin-Konfiguration `cypress/e2e/plugins/index.js` muss gelöscht werden.
  * Die Cypress "support"-Datei muss von `cypress/support/index.js` in `cypress/support/e2e.js` umbenannt werden
+ * 
 
 
 #### Neue Version des Cypress-Cucumber-Plugins

@@ -6,9 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## v6.0.2 - 2023-07-10
-### Fixed
-- Fix query for login-button in when statement
+## v6.1.0 - 2023-07-20
+### Added
+- When step "the user waits until the page is fully loaded" to ensure page is loaded when running e2e tests
+
+### Changed
+- When the user clicks the login button deleted - statement already integrated in other functions
+- Rename `integration` directory to `e2e` 
 
 ## v6.0.1 - 2023-04-27
 ### Fixed

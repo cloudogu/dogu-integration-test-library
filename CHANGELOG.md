@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- add `usermgtGetGroupWithResponse()` which helps to check whether a Usermgt group exists or not
+- add `usermgtGetGroupWithStatus()` which helps to check whether a Usermgt group exists or not
 
 ### Fixed
 - `usermgtGetGroup()` no longer provokes an internal server error in the Usermgt API (#34)

@@ -1,4 +1,4 @@
-## Getting Started
+# Getting Started
 
 ## Prerequisite
 
@@ -23,9 +23,9 @@ integrationTests
 └── yarn.lock
 ```
 
-## Include the library.
+## Include the library
 
-**1) Add dependency**.
+**1) Add dependency**
 
 Add the library as a dependency in package.json:
 
@@ -43,7 +43,7 @@ Add the library as a dependency in package.json:
 }
 ```
 
-**2) Include library in Cypress project**.
+**2) Include library in Cypress project**
 
 The library must be configured when Cypress is executed. For this the file `cypress.config.js` must be extended
 must be extended as follows:
@@ -65,7 +65,7 @@ module.exports = defineConfig({
 })
 ```
 
-**3) Registering the library commands**.
+**3) Registering the library commands**
 
 All library commands must be registered in the project. For this purpose the file `cypress/support/e2e.js` must be
 must be extended as follows:
@@ -80,7 +80,7 @@ import './commands/my_project_commands'
 ```
 
 
-**4) Registering the library step definitions**.
+**4) Registering the library step definitions**
 
 All library step definitions must be registered in the project. For this purpose a
 file `dogu_integration_test_library_steps.js` should be created in the folder `cypress/support/step_definitions`. The file
@@ -120,7 +120,7 @@ module.exports = defineConfig({
          "DoguName": "redmine",
          "MaxLoginRetries": 3,
          "AdminUsername": "ces-admin",
-         "AdminPassword": "ecosystem2016",
+         "AdminPassword": "ecosystem2016!",
          "AdminGroup": "CesAdministrators"
       },
       videoCompression: false,
@@ -134,7 +134,7 @@ module.exports = defineConfig({
 })
 ```
 
-**6) Integrate the global tests into the Dogus**.
+**6) Integrate the global tests into the Dogus**
 
 Update the tests of the Dogus by calling `yarn updateTestFiles`. These will be copied from the library into the
 Dogu project. These should be pushed into the repository. For this to work you still need
@@ -161,7 +161,7 @@ The following steps must be implemented for each dogu:
 **Step 1**
 
 ```javascript
- When(/^the user clicks the dogu logout button$/, function () {
+ When(/the user clicks the dogu logout button/, function () {
     //Ausgangssituation: Dogu Startseite -> Starte den Logoutprozess des Dogus via UI
 });
 ```
@@ -169,7 +169,7 @@ The following steps must be implemented for each dogu:
 **Step 2**
 
 ```javascript
- Then(/^the user has administrator privileges in the dogu$/, function () {
+ Then(/the user has administrator privileges in the dogu/, function () {
     //Bestimme, dass der derzeitige User Adminrechte im Dogu
 });
 ```
@@ -177,12 +177,12 @@ The following steps must be implemented for each dogu:
 **Step 3**
 
 ```javascript
- Then(/^the user has no administrator privileges in the dogu$/, function () {
+ Then(/the user has no administrator privileges in the dogu/, function () {
     //Bestimme, dass der derzeitige User kein Adminrechte im Dogu
 });
 ```
 
-**7) Create test user fixture**.
+**7) Create test user fixture**
 
 A fixture named `testuser_data.json` must be created in the `cypress/fixtures` folder. It contains the following information:
 
@@ -196,5 +196,3 @@ A fixture named `testuser_data.json` must be created in the `cypress/fixtures` f
   "mail": "test@cloudogu.com"
 }
 ```
-
-Translated with www.DeepL.com/Translator (free version)

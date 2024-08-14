@@ -93,7 +93,7 @@ doguTestLibrary.registerSteps()
 
 **5) Anpassen der Cypress konfiguration**
 
-Damit die Library nun auch sinnvoll mit dem Cypress Projekt arbeiten kann müssen folgenden Einstellung in
+Damit die Library nun auch sinnvoll mit dem Cypress Projekt arbeiten kann, müssen folgenden Einstellung in
 der `cypress.config.js` erstellt werden:
 
 1) Es muss die base-URL auf das Hostsystem angepasst werden. Dafür muss das Feld `baseUrl` auf die Host-FQDN angepasst
@@ -119,7 +119,7 @@ module.exports = defineConfig({
          "DoguName": "redmine",
          "MaxLoginRetries": 3,
          "AdminUsername": "ces-admin",
-         "AdminPassword": "ecosystem2016",
+         "AdminPassword": "ecosystem2016!",
          "AdminGroup": "CesAdministrators"
       },
       videoCompression: false,
@@ -160,7 +160,7 @@ Es müssen die folgenden Steps für jedes Dogu implementiert werden:
 **Step 1**
 
 ```javascript
- When(/^the user clicks the dogu logout button$/, function () {
+ When(/the user clicks the dogu logout button/, function () {
     //Ausgangssituation: Dogu Startseite -> Starte den Logoutprozess des Dogus via UI
 });
 ```
@@ -168,7 +168,7 @@ Es müssen die folgenden Steps für jedes Dogu implementiert werden:
 **Step 2**
 
 ```javascript
- Then(/^the user has administrator privileges in the dogu$/, function () {
+ Then(/the user has administrator privileges in the dogu/, function () {
     //Bestimme, dass der derzeitige User Adminrechte im Dogu
 });
 ```
@@ -176,7 +176,7 @@ Es müssen die folgenden Steps für jedes Dogu implementiert werden:
 **Step 3**
 
 ```javascript
- Then(/^the user has no administrator privileges in the dogu$/, function () {
+ Then(/the user has no administrator privileges in the dogu/, function () {
     //Bestimme, dass der derzeitige User kein Adminrechte im Dogu
 });
 ```

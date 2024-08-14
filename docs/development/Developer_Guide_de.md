@@ -17,6 +17,7 @@ Installieren sie die folgenden Werkzeuge:
 
 1) Eigenen Account bei NPMJS erstellen
 2) Via `npm login` in der CLI einloggen
-3) Versionsnummer und Changelog anpassen
-4) Via `npm publish` die neue Version veröffentlichen
+3) Gitflow release wie üblich durchführen
+4) Versionsnummer und Changelog anpassen 
+5) Via `npm publish` die neue Version veröffentlichen
 

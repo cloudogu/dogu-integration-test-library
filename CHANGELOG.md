@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## v6.1.0 - 2024-08-14
+### Added
+- add `usermgtGetGroupWithStatus()` which helps to check whether a Usermgt group exists or not
+
+### Fixed
+- `usermgtGetGroup()` no longer provokes an internal server error in the Usermgt API (#34)
+- Fix the development docs
+
 ## v6.0.1 - 2023-04-27
 ### Fixed
 - Handling of environment variables from the cypress config

@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Fixed
-- Fix `clickWarpMenuCheckboxIfPossible` function to work with the new warp menu 
+- Fix `clickWarpMenuCheckboxIfPossible` function to work with warp menu version >= v2.0.0 
 
 ## v6.1.0 - 2024-08-14
 ### Added

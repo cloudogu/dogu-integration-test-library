@@ -1,5 +1,3 @@
-![Cloudogu logo](https://cloudogu.com/images/logo.png)
-
 # dogu-integration-test-library
 
 This repository contains a library to support the creation of dogu integration test in the ecosystem.

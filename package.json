@@ -13,7 +13,7 @@
   },
   "author": "Cloudogu <hello@cloudogu.com>",
   "main": "lib/index.js",
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "publishConfig": {
     "access": "public"
   },

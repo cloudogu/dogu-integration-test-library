@@ -1,6 +1,6 @@
 {
   "name": "@cloudogu/dogu-integration-test-library",
-  "version": "6.1.1",
+  "version": "6.2.0",
   "description": "Library containing functionality used by all dogus integration tests in the Cloudogu Ecosystem",
   "homepage": "https://github.com/cloudogu/dogu-integration-test-library#readme",
   "repository": {
@@ -13,7 +13,7 @@
   },
   "author": "Cloudogu <hello@cloudogu.com>",
   "main": "lib/index.js",
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "publishConfig": {
     "access": "public"
   },

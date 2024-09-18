@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## v6.2.0 - 2024-09-18
+### Changed
+- Relicense to AGPL-3.0-only
+
 ## v6.1.1 - 2024-08-29
 ### Fixed
 - Fix `clickWarpMenuCheckboxIfPossible` function to work with warp menu version >= v2.0.0 

@@ -8,3 +8,7 @@ to release a new version, do the following:
   - change version in CHANGELOG.md
 - on develop and main, do `git push --tags`
 - create GitHub release for the tag created by git flow
+- publish on npmjs.org
+  - note: you have to have an existing account and reside in the npmjs Cloudogu organization
+  - call `npm adduser` and follow the CLI instructions
+  - call `npm publish` and follow the CLI instructions

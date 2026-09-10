@@ -1,5 +1,46 @@
 # Migration
 
+## Auf v7.0.0 migrieren
+
+Mit der Version v7.0.0 der library wurde Cypress von v12.9.0 auf Cypress v16.0.0 aktualisiert,
+sowie `@badeball/cypress-cucumber-preprocessor` von v16.0.0 auf v28.0.0 (die erste Version, die
+mit Cypress 16 peer-kompatibel ist).
+
+#### package.json
+Die Abhängigkeiten müssen wie folgt aktualisiert werden:
+```json
+{
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^28.0.0",
+    "@cloudogu/dogu-integration-test-library": "7.0.0",
+    "cypress": "16.0.0"
+  }
+}
+```
+
+#### GetAdminUsername() / GetAdminPassword() sind jetzt asynchron
+Cypress 16 hat das statische `Cypress.env()` entfernt, auf dem diese beiden Funktionen basierten.
+Sensible Zugangsdaten wie der CES-Admin-Benutzername/-Passwort müssen jetzt über den asynchronen
+`cy.env()`-Befehl abgerufen werden, weshalb beide Funktionen nun ein `Cypress.Chainable<String>`
+statt eines einfachen `String` zurückgeben. Projekte, die sie direkt aufrufen, müssen auf `.then()`
+umstellen:
+
+##### Alt
+```javascript
+cy.login(env.GetAdminUsername(), env.GetAdminPassword())
+```
+
+##### Neu
+```javascript
+env.GetAdminCredentials().then(({AdminUsername, AdminPassword}) => {
+    cy.login(AdminUsername, AdminPassword)
+})
+```
+
+`GetAdminCredentials()` ist eine neue Funktion, die beide Werte in einem Aufruf abruft.
+Alle anderen von der Library bereitgestellten Commands (`cy.usermgt*`, `cy.redmine*`, `cy.portainer*`,
+`cy.login`, `cy.loginAdmin`, ...) nutzen dies bereits intern und benötigen selbst keine Anpassung.
+
 ## Auf v6.0.0 migrieren
 
 Mit der Version v6.0.0 der library wurde Cypress von v8.6.0 auf Cypress v12.9.0 aktualisiert.

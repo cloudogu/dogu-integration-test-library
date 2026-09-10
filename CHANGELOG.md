@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## v7.0.0 - 2026-09-10
+### Changed
+#### Breaking Change
+Cypress Version 16.0.0 or higher is now required
+- [#42] Make library compatible with cypress v16
+- [#42] Bump @badeball/cypress-cucumber-preprocessor to v28.0.0
+
 ## v6.2.0 - 2024-09-18
 ### Changed
 - Relicense to AGPL-3.0-only
